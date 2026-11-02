@@ -1,51 +1,43 @@
-# 🔐 Image Steganography using LSB Encoding and Decoding
+# Image Steganography using LSB Encoding and Decoding
 
-### C Programming | Image Processing | Data Hiding
+## Project Overview
 
-## 📌 Project Overview
+Designed and implemented an Image Steganography application in C that securely embeds secret text data within BMP image files using the Least Significant Bit (LSB) technique. The application supports both encoding and decoding operations, enabling hidden data to be embedded into an image and later extracted without significantly altering its visual appearance.
 
-Image Steganography using LSB (Least Significant Bit) is a C programming project that demonstrates how secret information can be embedded into a BMP image and retrieved through decoding.
+This project demonstrates practical implementation of file handling, bitwise operations, pointers, and binary data processing in C.
 
-The project uses the LSB technique to hide data within image bytes while maintaining the visual appearance of the original image.
+## Features
 
-## 🚀 Key Features
+- Encode secret text files into BMP images.
+- Decode and extract hidden information from encoded images.
+- Validate encoded data using a magic string.
+- Preserve secret file size and extension during encoding and decoding.
 
-- **Encoding:** Embed secret data into a BMP image using LSB encoding.
-- **Decoding:** Extract hidden information from an encoded image.
-- **BMP File Handling:** Process image data using C file operations.
-- **Bitwise Data Manipulation:** Work with binary data at the bit level.
-- **Modular Programming:** Organize encoding and decoding functionality.
-
-## 🛠️ Technologies & Concepts
+## Technologies Used
 
 - C Programming
+- Linux
+- GCC Compiler
+
+## Concepts Implemented
+
+- Least Significant Bit (LSB) Encoding and Decoding
 - File Handling
-- Pointers
+- Pointers and Structures
 - Bitwise Operations
-- Structures
+- Binary Data Manipulation
 - Modular Programming
-- BMP Image Processing
+- Command-Line Arguments
 
-## ⚙️ Working Principle
+## How It Works
 
-The Least Significant Bit technique stores secret data by modifying selected least significant bits of image data. These small changes generally do not cause noticeable visual differences in the image.
+**Encoding:**
+1. Reads the source BMP image.
+2. Reads the secret text file.
+3. Embeds the secret data into the image using LSB encoding.
+4. Generates an output BMP image containing the hidden data.
 
-### Encoding Process
-
-1. Read the source BMP image.
-2. Read the secret data.
-3. Embed the data into the image using LSB encoding.
-4. Generate the encoded image.
-
-### Decoding Process
-
-1. Read the encoded image.
-2. Extract the hidden data.
-3. Reconstruct the secret information.
-
-## 🎯 Learning Outcomes
-
-- Understood the working principle of LSB-based steganography.
-- Practiced file handling and binary data manipulation in C.
-- Applied bitwise operations and pointers.
-- Improved modular programming and problem-solving skills.
+**Decoding:**
+1. Reads the encoded BMP image.
+2. Extracts the hidden data using LSB decoding.
+3. Reconstructs the original secret file.
