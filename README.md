@@ -19,6 +19,26 @@ This project demonstrates practical implementation of file handling, bitwise ope
 - Linux
 - GCC Compiler
 
+## Compilation and Execution
+
+### Compile
+
+```bash
+gcc main.c encode.c decode.c -o steganography
+```
+
+### Encoding
+
+```bash
+./steganography -e beautiful.bmp secret.txt
+```
+
+### Decoding
+
+```bash
+./steganography -d steged_img.bmp
+```
+
 ## Concepts Implemented
 
 - Least Significant Bit (LSB) Encoding and Decoding
@@ -26,18 +46,3 @@ This project demonstrates practical implementation of file handling, bitwise ope
 - Pointers and Structures
 - Bitwise Operations
 - Binary Data Manipulation
-- Modular Programming
-- Command-Line Arguments
-
-## How It Works
-
-**Encoding:**
-1. Reads the source BMP image.
-2. Reads the secret text file.
-3. Embeds the secret data into the image using LSB encoding.
-4. Generates an output BMP image containing the hidden data.
-
-**Decoding:**
-1. Reads the encoded BMP image.
-2. Extracts the hidden data using LSB decoding.
-3. Reconstructs the original secret file.
