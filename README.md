@@ -24,19 +24,19 @@ This project demonstrates practical implementation of file handling, bitwise ope
 ### Compile
 
 ```bash
-gcc main.c encode.c decode.c -o steganography
+gcc *.c
 ```
 
 ### Encoding
 
 ```bash
-./steganography -e beautiful.bmp secret.txt
+./a.out -e beautiful.bmp secret.txt steged_img.bmp
 ```
 
 ### Decoding
 
 ```bash
-./steganography -d steged_img.bmp
+./a.out -d steged_img.bmp
 ```
 
 ## Concepts Implemented
